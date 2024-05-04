@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://background/background_0.png" type="Texture" id=1]
+[ext_resource path="res://background/background_2.png" type="Texture" id=2]
+[ext_resource path="res://background/background_1.png" type="Texture" id=3]
+
+[node name="ParallaxBg" type="ParallaxBackground"]
+scale = Vector2( 1.4, 1.4 )
+transform = Transform2D( 1.4, 0, 0, 1.4, 0, 0 )
+scroll_base_scale = Vector2( 0.7, 0 )
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 300, 0 )
+
+[node name="Sprite" type="Sprite" parent="Sky"]
+scale = Vector2( 1.05159, 1 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Mount2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 300, 0 )
+
+[node name="Sprite" type="Sprite" parent="Mount2"]
+position = Vector2( 0, -205.714 )
+scale = Vector2( 1.1, 2.09524 )
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( 0, 0, 800, 256 )
+
+[node name="Mount1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 300, 0 )
+
+[node name="Sprite" type="Sprite" parent="Mount1"]
+position = Vector2( 0, -205.714 )
+scale = Vector2( 1.1, 2.09524 )
+texture = ExtResource( 2 )
+centered = false
+region_rect = Rect2( 0, 0, 800, 256 )
